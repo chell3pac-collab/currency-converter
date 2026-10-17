@@ -1,0 +1,295 @@
+@use '../global/variables' as *;
+
+.converter {
+    padding-bottom: 124px;
+
+    @media (max-width: 1024px) {
+        padding-bottom: 160px;
+    }
+
+    @media (max-width: 500px) {
+        padding-bottom: 132px;
+    }
+
+    @media (max-width: 360px) {
+        padding-bottom: 108px;
+    }
+
+    &__title {
+        font-weight: 700;
+        font-size: 22px;
+        line-height: 20.57px;
+        vertical-align: middle;
+        text-transform: uppercase;
+        margin: 0 0 50px;
+
+        @media (max-width: 1024px) {
+            font-size: 30px;
+        }
+
+        @media (max-width: 500px) {
+            font-size: 24px;
+        }
+
+        @media (max-width: 360px) {
+            font-size: 22px;
+            line-height: 22px;
+        }
+    }
+
+    &__controls {
+        display: flex;
+        justify-content: space-between;
+
+        @media (max-width: 1150px) {
+            flex-direction: column;
+            position: relative;
+        }
+    }
+
+    &__group {
+        flex: 1;
+        max-width: 380px;
+
+        @media (max-width: 1276px) {
+            max-width: 320px;
+        }
+
+        @media (max-width: 1150px) {
+            max-width: 950px;
+        }
+    }
+
+    &__group--first {
+
+        @media (max-width: 1150px) {
+            margin-bottom: 72px;
+        }
+    }
+
+    &__label {
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 16px;
+        color: $color-medium-gray;
+        margin: 0 0 16px;
+        display: block;
+        height: 16px;
+
+        @media (max-width: 1024px) {
+            font-size: 24px;
+        }
+
+        @media (max-width: 360px) {
+            font-size: 22px;
+            line-height: 0px;
+            margin: 0 0 6px;
+        }
+    }
+
+    &__wrapper-second {
+        @media (max-width: 1024px) {
+            display: flex;
+            flex-direction: column;
+            flex-direction: column-reverse;
+        }
+    }
+
+    &__inner {
+        display: flex;
+        margin: 0 0 24px;
+        max-width: 380px;
+
+        @media (max-width: 1150px) {
+            max-width: 940px;
+            margin: 0;
+        }
+
+        @media (max-width: 1024px) {
+            max-width: 820px;
+            margin: 0;
+        }
+    }
+
+    &__select {
+        max-width: 320px;
+        width: 100%;
+        height: 40px;
+        appearance: none;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        background-color: $color-blue-azure;
+        color: $color-white;
+        border: 1px solid $color-light-gray;
+        border-top-left-radius: 4px;
+        border-bottom-left-radius: 4px;
+        pointer-events: none;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 14px;
+        text-align: center;
+        text-transform: uppercase;
+
+        @media (max-width: 1150px) {
+            max-width: unset;
+        }
+
+        @media (max-width: 1024px) {
+            height: 56px;
+            max-width: 656px;
+        }
+
+        @media (max-width: 360px) {
+            height: 40px;
+            max-width: 256px;
+        }
+    }
+
+    &__input {
+        width: 100%;
+        border: 1px solid $color-light-gray;
+        border-radius: 2px;
+        height: 136px;
+        font-weight: 700;
+        font-size: 44px;
+        line-height: 100%;
+        padding: 32px 24px 60px;
+
+        @media (max-width: 1024px) {
+            height: 185px;
+            font-size: 56px;
+            padding: 30px 23px 20px;
+        }
+
+        @media (max-width: 360px) {
+            font-size: 44px;
+            height: 145px;
+        }
+    }
+
+    &__btn {
+        width: 60px;
+        height: 40px;
+        border-style: solid;
+        border-color: $color-light-gray;
+        border-top-right-radius: 4px;
+        border-bottom-right-radius: 4px;
+        margin: 0;
+        padding: 0;
+        background-color: $color-white;
+        border-left: none;
+        cursor: pointer;
+
+        @media (max-width: 1024px) {
+            height: 56px;
+            width: 164px;
+        }
+
+        @media (max-width: 600px) {
+            width: 100px;
+        }
+
+        @media (max-width: 360px) {
+            width: 60px;
+            height: 40px;
+        }
+    }
+
+    &__icon {
+        @media (max-width: 1024px) {
+            width: 22px;
+            height: 17px;
+        }
+
+        @media (max-width: 360px) {
+            width: 16px;
+            height: 9px;
+        }
+    }
+
+    &__swap {
+        border: none;
+        background-color: transparent;
+        cursor: pointer;
+        padding: 0;
+        margin-top: 97px;
+
+        @media (max-width: 1150px) {
+            margin-top: 0;
+            width: 88px;
+            height: 88px;
+            box-shadow: 0px 5px 13px 0px $color-light-gray80;
+            border-radius: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: absolute;
+            right: 0;
+            top: 50%;
+            transform: translateY(-33%);
+        }
+
+        @media (max-width: 550px) {
+            width: 70px;
+            height: 70px;
+        }
+
+        @media (max-width: 360px) {
+            width: 64px;
+            height: 64px;
+        }
+    }
+
+    &__icon-desctop {
+        @media (max-width: 1150px) {
+            display: none;
+        }
+    }
+
+    &__icon-desctop:hover {
+        color: $color-blue-azure;
+    }
+
+    &__icon-desctop:active {
+        color: $color-medium-gray;
+    }
+
+    &__icon-tablet {
+        display: none;
+
+        @media (max-width: 1150px) {
+            display: block;
+            width: 56px;
+            height: 56px;
+        }
+
+        @media (max-width: 550px) {
+            width: 45px;
+            height: 45px;
+        }
+
+        @media (max-width: 360px) {
+            width: 40px;
+            height: 40px;
+        }
+    }
+
+    &__icon-tablet:active {
+        color: $color-blue-azure;
+    }
+
+}
+
+@media (max-width: 1024px) {
+    select.converter__select {
+        max-height: 250px;
+        /* Ограничиваем высоту списка */
+        overflow-y: auto;
+        /* Включаем прокрутку, если не влезает */
+    }
+
+    select.converter__select option {
+    font-size: 15px;
+  }
+}
+

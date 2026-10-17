@@ -1,0 +1,249 @@
+@use '../global/variables' as *;
+
+.rates {
+  padding: 0;
+
+  &__title {
+    margin: 0 0 40px;
+    font-weight: 700;
+    font-size: 22px;
+    line-height: 20.57px;
+    text-transform: uppercase;
+
+    @media (max-width: 1024px) {
+      font-size: 30px;
+      line-height: 40px;
+      vertical-align: bottom;
+      width: 400px;
+    }
+
+    @media (max-width: 360px) {
+      font-size: 22px;
+      line-height: 30px;
+      width: 316px;
+    }
+  }
+
+  &__wrapper {
+    max-width: 940px;
+    margin: 0 auto;
+  }
+
+  &__table {
+    width: 100%;
+    border-collapse: collapse;
+    border-bottom: 1px solid $color-light-gray;
+  }
+
+  &__head .rates__row {
+    border-top-width: 1px;
+    border-left-width: 1px;
+    border-bottom-width: 0px;
+    border-right-width: 1px;
+    border-style: solid;
+    border-color: $color-light-gray;
+    height: 60px;
+
+    @media (max-width: 1024px) {
+      display: none;
+    }
+  }
+
+  &__head .rates__cell {
+    font-weight: 600;
+  }
+
+  &__cell {
+    padding: 21px 0;
+    text-align: left;
+    vertical-align: middle;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 16px;
+
+    @media (max-width: 1150px) {
+      padding: 18px 0;
+      font-size: 13px;
+      line-height: 13px;
+    }
+  }
+
+  &__head .rates__cell_code {
+    padding-left: 24px;
+
+  }
+
+  &__head .rates__cell_rate {
+    text-align: left;
+    color: $color-black;
+    padding-right: 24px;
+  }
+
+  &__body .rates__row {
+    border-top-width: 1px;
+    border-left-width: 1px;
+    border-bottom-width: 0px;
+    border-right-width: 1px;
+    border-style: solid;
+    border-color: $color-light-gray;
+    height: 64px;
+  }
+
+  &__body .rates__row:last-child {
+    border-bottom: none;
+  }
+
+  &__cell_code {
+    width: 118px;
+    padding-left: 24px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    white-space: nowrap;
+  }
+
+  &__body .rates__cell_unit {
+    color: $color-medium-gray;
+  }
+
+  &__body .rates__cell_name {
+    color: $color-medium-gray;
+  }
+
+  &__cell_name:hover {
+    color: $color-blue-azure;
+    line-height: 24px;
+  }
+
+  &__body .rates__cell_rate {
+    color: $color-black;
+  }
+
+  &__cell_unit {
+    width: 137px;
+  }
+
+  &__cell_name {
+    width: 318px;
+  }
+
+  &__cell_rate {
+    width: 324px;
+    text-align: left;
+    padding-right: 24px;
+  }
+
+  &__row-card:nth-child(odd) .rates__card {
+    background-color: $color-blue-grey;
+  }
+
+  &__card-wrapper {
+    padding: 0;
+  }
+
+  &__card-row {
+    display: flex;
+    align-items: center;
+    padding: 17px 0 16px;
+    height: 60px;
+    border-top-width: 1px;
+    border-left-width: 1px;
+    border-bottom-width: 0px;
+    border-right-width: 1px;
+    border-style: solid;
+    border-color: $color-light-gray;
+  }
+
+  &__label {
+      font-size: 20px;
+      font-weight: 400;
+      line-height: 100%;
+      color: #000000;
+      max-width: 400px;
+      width: 100%;
+      padding-left: 24px;
+    
+    @media (max-width: 360px) {
+      font-size: 16px;
+      max-width: 148px;
+    }
+  }
+
+  &__wrapper-flag {
+    display: flex;
+    gap: 8px;
+    max-width: 420px;
+    width: 100%;
+  }
+
+  &__value {
+    font-size: 20px;
+    line-height: 16px;
+    padding-left: 24px;
+    color: $color-medium-gray;
+    max-width: 420px;
+    width: 100%;
+
+    @media (max-width: 360px) {
+      font-size: 16px;
+      line-height: 20px;
+    }
+  }
+
+  &__value-first {
+    padding-left: 0;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 16px;
+    color: $color-black;
+
+    @media (max-width: 360px) {
+      font-size: 16px;
+    }
+  }
+
+  &__value-text:hover {
+    color: $color-blue-azure;
+  }
+
+  &__value-last {
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 20px;
+    color: $color-black;
+
+    @media (max-width: 360px) {
+      font-size: 16px;
+    }
+  }
+}
+
+.currency-flag {
+  display: block;
+  width: 27px;
+  height: 20px;
+  object-fit: cover;
+  flex-shrink: 0;
+
+  @media (max-width: 1024px) {
+    margin-left: 24px;
+  }
+}
+
+
+
+
+
+
+
+  
+
+  
+
+
+
+  
+
+
+
+  

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="scss/css/style.css">
+    <title>Конвертер валют</title>
+</head>
+
+<body>
+    <main >
+        <section class="converter">
+            <div class="container">
+                <h1 class="visually-hidden">Программа для конвертации валют</h1>
+                <div class="converter__wrapper" role="region" aria-labelledby="converter-title">
+                    <h2 id="converter__title" class="converter__title">Конвертер валют</h2>
+                    <div class="converter__controls">
+                        <div class="converter__group converter__group_from converter__group--first ">
+                            <label for="fromCurrency" class="converter__label">У меня имеется</label>
+                            <div class="converter__inner">
+                                <select id="fromCurrency" class="converter__select"
+                                    aria-label="Валюта источника"></select>
+                                <button class="converter__btn" type="button" aria-label="Выбрать валюту источника"
+                                    aria-haspopup="listbox" aria-controls="fromCurrency">
+                                    <svg class="converter__icon" width="13" height="8" viewBox="0 0 13 8" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <use xlink:href="images/sprite.svg#icon-dropdown"></use>
+                                    </svg>
+                                </button>
+                            </div>
+                            <input type="text" id="fromAmount" class="converter__input" placeholder="0"
+                                 aria-label="Сумма источника">
+                        </div>
+
+                        <button class="converter__swap swap-btn" type="button" id="swapCurrencies"
+                            aria-label="Поменять валюты местами">
+                            <svg class="converter__icon-desctop" width="50" height="55" viewBox="0 0 50 55" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <use xlink:href="images/sprite.svg#icon-hands"></use>
+                            </svg>
+                            <svg class="converter__icon-tablet" width="56" height="56" viewBox="0 0 56 56" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <use xlink:href="images/sprite.svg#icon-arrows-reload"></use>
+                            </svg>
+                        </button>
+
+                        <div class="converter__group converter__group_to">
+                            <label for="toCurrency" class="converter__label">Хочу приобрести</label>
+                            <div class="converter__wrapper-second">
+                                <div class="converter__inner">
+                                    <select id="toCurrency" class="converter__select"
+                                        aria-label="Валюта назначения"></select>
+                                    <button class="converter__btn" type="button" aria-label="Выбрать валюту источника"
+                                        aria-haspopup="listbox" aria-controls="fromCurrency">
+                                        <svg class="converter__icon" width="13" height="8" viewBox="0 0 13 8"
+                                            fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <use xlink:href="images/sprite.svg#icon-dropdown"></use>
+                                        </svg>
+                                    </button>
+                                </div>
+                                <input type="text" id="toAmount" class="converter__input converter__input_readonly"
+                                    readonly aria-label="Результат конвертации">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="rates">
+            <div class="container">
+                <div class="rates__wrapper" role="region" aria-labelledby="rates-title">
+                    <h2 id="rates-title" class="rates__title">Курсы валют на <span>--.--.----</span></h2>
+                    <table class="rates__table" aria-describedby="rates-title">
+                        <thead class="rates__head">
+                            <tr class="rates__row">
+                                <th class="rates__cell rates__cell_code">Код</th>
+                                <th class="rates__cell rates__cell_unit">Единица</th>
+                                <th class="rates__cell rates__cell_name">Валюта</th>
+                                <th class="rates__cell rates__cell_rate">Курс базовой валюты</th>
+                            </tr>
+                        </thead>
+                        <tbody id="rates-body" class="rates__body"></tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+    </main>
+    <script src="script.js" defer></script>
+</body>
+
+</html>
